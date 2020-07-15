@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     ProgressBar progressBar;
     SharedPreferences sp, pref;
     SharedPreferences.Editor editor;
-    private String secretKey = "RCS19082019#1$@123";
+    private String secretKey = "XXXXXX";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
