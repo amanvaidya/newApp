@@ -72,7 +72,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean validateLogin(String login_name, String password, String url) {
-        if (url == null || url.trim().length() == 0 || !isValid(url)) {
+        if (url == null || url.trim().length() == 0 /*|| !isValid(url)*/) {
+            System.out.println(url+"url");
             Toast.makeText(this, "Please enter a valid URL", Toast.LENGTH_SHORT).show();
             progressBar.setVisibility(View.GONE);
             return false;

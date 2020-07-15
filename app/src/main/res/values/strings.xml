@@ -10,6 +10,7 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_scanning">Scanning</string>
+    <string name="menu_pr">Create PR</string>
     <string name="menu_logout">Logout</string>
     <string name="username">Username</string>
     <string name="password">Password</string>

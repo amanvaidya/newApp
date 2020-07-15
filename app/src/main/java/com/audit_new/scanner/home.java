@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.widget.TextView;
 
 import com.audit_new.scanner.fragments.DashBoard;
+import com.audit_new.scanner.fragments.PRFragment;
 import com.audit_new.scanner.fragments.ScanningFragment;
 import com.audit_new.scanner.fragments.logout;
 
@@ -111,11 +112,18 @@ public class home extends AppCompatActivity
         Fragment fragment = null;
         if (id == R.id.nav_home) {
             fragment = new DashBoard();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_pr) {
+            fragment = new PRFragment();
+        }else if (id == R.id.nav_gallery) {
             fragment = new ScanningFragment();
         } else if (id == R.id.nav_slideshow) {
             fragment = new logout();
         }
+
+        /*else if(id==R.id.nav_ocr){
+            Intent intent = new Intent(home.this, OcrReader.class);
+            startActivity(intent);
+        }*/
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

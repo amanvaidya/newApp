@@ -1,7 +1,6 @@
 package com.audit_new.scanner.service.DAO;
 
 import com.audit_new.scanner.service.pojo.MobileScanningDetails;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Header;

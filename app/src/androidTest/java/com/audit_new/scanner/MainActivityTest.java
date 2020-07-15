@@ -1,6 +1,5 @@
 package com.audit_new.scanner;
 
-
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;

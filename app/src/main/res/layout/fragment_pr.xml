@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".fragments.PRFragment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create PR"
+        android:textSize="20dp"
+        android:paddingTop="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="80dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/prScroll"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:hint="Requested By"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/spinnerPr1"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerPr1"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/spinnerPr2"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerPr2"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/spinnerPr3"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerPr3"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/spinnerPr4"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:hint="Reason"
+                android:layout_below="@id/spinnerPr4"
+                android:id="@+id/spinnerPr5"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@id/spinnerPr5"
+                android:id="@+id/spinnerPr6"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@id/spinnerPr6"
+                android:id="@+id/spinnerPr7"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next>>"
+                android:textSize="14dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:id="@+id/prButton1"
+                android:layout_below="@id/spinnerPr7"
+                >
+
+            </Button>
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

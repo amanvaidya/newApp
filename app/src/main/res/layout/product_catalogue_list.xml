@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="2dp"
+            android:id="@+id/PrProdImg"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line 1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/PrProdImg"
+
+            android:id="@+id/PrProdTxt1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line 2"
+            android:textSize="10sp"
+            android:textColor="#000"
+            android:layout_below="@id/PrProdTxt1"
+            android:layout_toEndOf="@id/PrProdImg"
+
+            android:id="@+id/PrProdTxt2"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp" />
+
+        <ImageView
+            android:id="@+id/image_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+
+            android:src="@drawable/ic_remove_circle" />
+
+        <TextView
+            android:id="@+id/prCount"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="0" />
+
+        <ImageView
+            android:id="@+id/image_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_add_circle" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

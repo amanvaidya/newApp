@@ -1,7 +1,6 @@
 package com.audit_new.scanner.service.DAO;
 
 
-
 import com.audit_new.scanner.service.pojo.FacilityResult;
 import java.util.ArrayList;
 import retrofit2.Call;

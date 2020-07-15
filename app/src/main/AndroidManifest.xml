@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.audit_new.scanner">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@drawable/favi_logo"
         android:label="Rcs Scanner"
@@ -14,9 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.audit_new.scanner.ScannerActivity"></activity>
-        <activity android:name="com.audit_new.scanner.ScanScreen" android:label=""/>
-        <activity android:name="com.audit_new.scanner.SplashScreen"
+        <activity android:name=".OcrReader" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr" />
+
+        <activity android:name=".ScannerActivity" />
+        <activity
+            android:name=".ScanScreen"
+            android:label="" />
+        <activity
+            android:name=".SplashScreen"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,14 +32,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.audit_new.scanner.home"
+            android:name=".home"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.audit_new.scanner.LoginActivity"
-            android:noHistory="true">
-
-        </activity>
+            android:name=".LoginActivity"
+            android:noHistory="true" />
     </application>
 
 </manifest>
