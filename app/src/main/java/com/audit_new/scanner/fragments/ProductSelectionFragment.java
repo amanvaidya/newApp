@@ -50,7 +50,6 @@ public class ProductSelectionFragment extends Fragment {
         authKey=preferences.getString("auth_token",null);
         createProductList();
         mRecyclerView = v.findViewById(R.id.recyclerView);
-
         button = (Button) v.findViewById(R.id.btnCheckout);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,19 +62,14 @@ public class ProductSelectionFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-
-
         return v;
     }
 
     public void createProductList() {
-        System.out.println("In this method");
         Call<ArrayList<ProductDetails>> call = productDAO.getMyProducts(authKey);
-        System.out.println("or am i here");
         call.enqueue(new Callback<ArrayList<ProductDetails>>() {
             @Override
             public void onResponse(Call<ArrayList<ProductDetails>> call, Response<ArrayList<ProductDetails>> response) {
-                System.out.println("am i here");
                 productCatalogueList=response.body();
                 buildRecyclerView(productCatalogueList);
             }
@@ -87,14 +81,11 @@ public class ProductSelectionFragment extends Fragment {
         });
     }
     public void buildRecyclerView(final ArrayList<ProductDetails> productCatalogueList){
-        System.out.println("No In this method");
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getContext());
         mAdapter = new ProductListAdapter(productCatalogueList);
-
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
-
         mAdapter.setOnItemClickListener(new ProductListAdapter.OnItemClickListener() {
             @Override
             public void onDeleteClick(int position) {
@@ -102,17 +93,12 @@ public class ProductSelectionFragment extends Fragment {
                     productCatalogueList.get(position).changeCount(productCatalogueList.get(position).getmCount()-1);
                     mAdapter.notifyItemChanged(position);
                 }
-
             }
-
             @Override
             public void onAddClick(int position) {
                productCatalogueList.get(position).changeCount(productCatalogueList.get(position).getmCount()+1);
                 mAdapter.notifyItemChanged(position);
             }
-
-
         });
     }
-
 }

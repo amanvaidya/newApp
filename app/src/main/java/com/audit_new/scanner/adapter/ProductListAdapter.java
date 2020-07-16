@@ -1,6 +1,8 @@
 package com.audit_new.scanner.adapter;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.audit_new.scanner.R;
+import com.audit_new.scanner.fragments.PRNumberGeneration;
 import com.audit_new.scanner.helper.ProductCatalogueList;
 import com.audit_new.scanner.service.pojo.ProductDetails;
 
@@ -19,8 +22,6 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
 
     private ArrayList<ProductDetails> mProductList;
     private OnItemClickListener mListener;
-
-
 
 
     public interface OnItemClickListener {
@@ -42,6 +43,20 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         productViewHolder.mTextView1.setText(currentItem.getGroupName());
         productViewHolder.mTextView2.setText(currentItem.getProduct_name());
         productViewHolder.productCount.setText(String.valueOf(currentItem.getmCount()));
+
+        Fragment fragment = new PRNumberGeneration();
+        Bundle bundle     = new Bundle();
+        bundle.putInt("prod_id",currentItem.getProd_id());
+        bundle.putString("prod_name",currentItem.getProduct_name());
+        bundle.putString("prod_desc",currentItem.getProduct_desc());
+        bundle.putString("asset_type",currentItem.getAsset_type());
+        bundle.putString("model",currentItem.getModel());
+        bundle.putString("manufacturer",currentItem.getManufacturer());
+        bundle.putString("groupName",currentItem.getGroupName());
+        bundle.putString("uom",currentItem.getUOM());
+        bundle.putString("group_Id",currentItem.getGroup_Id());
+        bundle.putInt("qty",currentItem.getmCount());
+        fragment.setArguments(bundle);
     }
 
     @Override
